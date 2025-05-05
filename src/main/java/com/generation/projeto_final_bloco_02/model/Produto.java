@@ -52,11 +52,11 @@ public class Produto {
 	}
 
 
-	public LocalDate getDatafabricacao() {
+	public LocalDate getDataValidade() {
 		return datavalidade;
 	}
 
-	public void setDatafabricacao(LocalDate datavalidade) {
+	public void setDataValidade(LocalDate datavalidade) {
 		this.datavalidade = datavalidade;
 	}
 

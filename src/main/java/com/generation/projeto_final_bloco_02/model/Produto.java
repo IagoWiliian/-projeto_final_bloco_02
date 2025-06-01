@@ -1,7 +1,9 @@
 package com.generation.projeto_final_bloco_02.model;
 
+import java.math.BigDecimal;
 import java.time.LocalDate;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 import jakarta.persistence.Entity;
@@ -26,9 +28,8 @@ public class Produto {
 	@Size(min = 5, max = 100)
 	private String nome;
 	
-	
 	@NotNull
-	private LocalDate datavalidade;
+	private BigDecimal preco;
 	
 
 	@ManyToOne
@@ -52,12 +53,14 @@ public class Produto {
 	}
 
 
-	public LocalDate getDataValidade() {
-		return datavalidade;
+	
+
+	public BigDecimal getPreco() {
+		return preco;
 	}
 
-	public void setDataValidade(LocalDate datavalidade) {
-		this.datavalidade = datavalidade;
+	public void setPreco(BigDecimal preco) {
+		this.preco = preco;
 	}
 
 	public Categoria getCategoria() {
